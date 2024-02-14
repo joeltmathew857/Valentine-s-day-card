@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Singles</title>
+    <!-- Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Additional CSS can be added here */
+    </style>
+  </head>
+  <body class="bg-gray-200 flex justify-center items-center h-screen">
+    <div class="bg-white shadow-lg p-8 rounded-lg max-w-md">
+      <h1 class="text-3xl font-semibold mb-4">For Singles</h1>
+      <p class="text-lg mb-6">
+        It's just another day, and that's perfectly okay!
+      </p>
+
+      <p class="text-lg mb-6">You're awesome just the way you are.</p>
+      <!-- Carousel container -->
+      <div id="gifCarousel" class="relative">
+        <!-- Individual gif images -->
+        <img
+          src="https://media.giphy.com/media/92pcDNxVVOfjie4iBL/giphy.gif?cid=ecf05e470xs4ynn6n3y3ng1yeiatriz6ligrpgs94m19dxdv&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+          alt="Heart"
+          class="mx-auto mb-6"
+        />
+        <img
+          src="https://media.giphy.com/media/kexZpgaYkGRnCCUyVI/giphy.gif?cid=ecf05e47zfute9f4m2ljiwrcc3hj8433ygotwylwwno9nerl&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+          alt="Heart"
+          class="hidden mx-auto mb-6"
+        />
+        <img
+          src="https://media.giphy.com/media/G3CZkWInLVVbG/giphy.gif?cid=ecf05e47zfute9f4m2ljiwrcc3hj8433ygotwylwwno9nerl&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+          alt="Heart"
+          class="hidden mx-auto mb-6"
+        />
+      </div>
+      <div class="flex justify-center space-x-32">
+        <button
+          id="singleBack"
+          class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-8 rounded focus:outline-none focus:shadow-outline"
+        >
+          Back
+        </button>
+        <button
+          id="singleForward"
+          class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline"
+        >
+          Forward
+        </button>
+      </div>
+    </div>
+    <script>
+      // JavaScript code can be added here
+      const gifs = document.querySelectorAll("#gifCarousel img");
+      let currentGifIndex = 0;
+
+      document
+        .getElementById("singleBack")
+        .addEventListener("click", function () {
+          window.location.href = "index.html";
+        });
+
+      document
+        .getElementById("singleForward")
+        .addEventListener("click", function () {
+          window.location.href = "Anothersi.html";
+        });
+
+      // Function to show next gif
+      function showNextGif() {
+        gifs[currentGifIndex].classList.add("hidden");
+        currentGifIndex = (currentGifIndex + 1) % gifs.length;
+        gifs[currentGifIndex].classList.remove("hidden");
+      }
+
+      // Show the first gif initially
+      gifs[currentGifIndex].classList.remove("hidden");
+
+      // Show next gif every 3 seconds
+      setInterval(showNextGif, 3000);
+    </script>
+  </body>
+</html>

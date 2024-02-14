@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine's Day Greeting Card</title>
+    <!-- Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Additional CSS can be added here */
+    </style>
+  </head>
+  <body class="bg-green-100 flex justify-center items-center h-screen">
+    <div class="bg-white shadow-lg p-8 rounded-lg max-w-md">
+      <h1 class="text-3xl font-semibold mb-4">Happy Valentine's Day!</h1>
+      <p class="text-lg mb-6">
+        Roses are red, violets are blue. Here's a little card, just for you!
+      </p>
+      <!-- Replace joel  src attribute with your GIF link -->
+      <img
+        src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2Z0dzY1OTEyMTdqMmI2a2ExbHFqb2JxZWJwYjIzeTk0aXhlYnFiNyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Gpqk76tiVKjn2/giphy.gif"
+        alt="Heart"
+        class="mx-auto mb-6"
+      />
+      <div class="flex justify-center space-x-16">
+        <button
+          id="loveButton"
+          class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        >
+          Send Love
+        </button>
+        <button
+          id="singleLife"
+          class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-8 rounded focus:outline-none focus:shadow-outline"
+        >
+          For Singles
+        </button>
+      </div>
+    </div>
+    <script>
+      // JavaScript code can be added here
+      document
+        .getElementById("loveButton")
+        .addEventListener("click", function () {
+          window.location.href = "Showlove.html";
+        });
+      document
+        .getElementById("singleLife")
+        .addEventListener("click", function () {
+          window.location.href = "single.html";
+        });
+    </script>
+  </body>
+</html>

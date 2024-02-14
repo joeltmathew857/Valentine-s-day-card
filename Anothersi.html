@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Singles</title>
+    <!-- Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Additional CSS can be added here */
+      .gif-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .gif-grid img {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-200 flex justify-center items-center h-screen">
+    <div class="bg-white shadow-lg p-8 rounded-lg max-w-md">
+      <h1 class="text-3xl font-semibold mb-4">Enjoy your life</h1>
+      <p class="text-lg mb-6">
+        Embrace your freedom and relish every moment of independence, enjoying
+        life to the fullest
+      </p>
+      <div class="gif-grid">
+        <!-- Replace the src attributes with your GIF links -->
+        <img
+          src="https://media.giphy.com/media/FBeSx3itXlUQw/giphy.gif?cid=790b7611r94f8syflig6aetf2owkgyvelzu4b9ylnq2gs5wz&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+          alt="GIF 1"
+        />
+        <img
+          src="https://media.giphy.com/media/nDMyoNRkCesJdZAuuL/giphy.gif?cid=ecf05e475u0rsdcqj6l6y5w50taesqim4bhx0at7q90inm1m&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+          alt="GIF 2"
+        />
+        <img
+          src="https://media.giphy.com/media/RCWnPtUMtWs3VdPj8A/giphy.gif?cid=ecf05e475u0rsdcqj6l6y5w50taesqim4bhx0at7q90inm1m&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+          alt="GIF 3"
+        />
+        <img
+          src="https://media.giphy.com/media/blSTtZehjAZ8I/giphy.gif?cid=790b7611u10l17tbotvbt102y41lvmpdfbde5z87h9jvxduf&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+          alt="GIF 4"
+        />
+        <img
+          src="https://media.giphy.com/media/kexZpgaYkGRnCCUyVI/giphy.gif?cid=ecf05e47zfute9f4m2ljiwrcc3hj8433ygotwylwwno9nerl&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+          alt="GIF 5"
+        />
+        <img
+          src="https://media.giphy.com/media/GFys6OHZ1FZWo/giphy.gif?cid=ecf05e47ecw8xwej6rg179djsfcdemfaw0os3k3uj04dg0x2&ep=v1_gifs_search&rid=giphy.gif&ct=gf"
+          alt="GIF 6"
+        />
+      </div>
+      <button
+        id="singleback"
+        class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline"
+      >
+        back
+      </button>
+    </div>
+    <script>
+      // JavaScript code can be added here
+      document
+        .getElementById("singleback")
+        .addEventListener("click", function () {
+          window.location.href = "single.html";
+        });
+    </script>
+  </body>
+</html>

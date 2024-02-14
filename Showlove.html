@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I Love You</title>
+    <!-- Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Additional CSS can be added here */
+    </style>
+  </head>
+  <body class="bg-pink-100 flex justify-center items-center h-screen">
+    <div class="bg-white shadow-lg p-8 rounded-lg max-w-md">
+      <h1 class="text-3xl font-semibold mb-4">I Love You!</h1>
+      <p class="text-lg mb-6">Sending all my love your way.</p>
+      <!-- Replace the src attribute with your GIF link -->
+      <img
+        src="https://media.giphy.com/media/5PhYotn1t5s0M10Aly/giphy.gif?cid=790b76117ftw6591217j2b6ka1lqjobqebpb23y94ixebqb7&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+        alt="Heart"
+        class="mx-auto mb-6"
+      />
+      <div class="flex justify-center space-x-32">
+        <button
+          id="singleback"
+          class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        >
+          Change mind
+        </button>
+        <button
+          id="besingle"
+          class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        >
+          forward
+        </button>
+      </div>
+    </div>
+    <script>
+      document
+        .getElementById("singleback")
+        .addEventListener("click", function () {
+          window.location.href = "index.html";
+        });
+      document
+        .getElementById("besingle")
+        .addEventListener("click", function () {
+          window.location.href = "singleto.html";
+        });
+    </script>
+  </body>
+</html>
